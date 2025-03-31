@@ -10,12 +10,11 @@ TodoApp is a Spring Boot-based task management application that allows users to 
 - ✅ MySQL Database Integration
 - ✅ Postman as Client
 - ✅ Token-Based Authentication
-- ✅ Error Handling and Security Measures
 
 ## Technology Stack
 - **Backend:** Spring Boot, Spring Security, JPA, MySQL
 - **Client:** Postman (for API interaction)
-- **Tools:** GitHub (for version control)
+- **Tools:** GitHub
 
 ## API Endpoints
 
@@ -40,9 +39,9 @@ TodoApp is a Spring Boot-based task management application that allows users to 
 ```json
 POST /auth/register
 {
-  "name": "John Doe",
-  "email": "john@doe.com",
-  "password": "password"
+  "name": "prem",
+  "email": "prem@gmail.com",
+  "password": "prem"
 }
 ```
 #### Response
@@ -58,8 +57,8 @@ POST /auth/register
 ```json
 POST /auth/login
 {
-  "email": "john@doe.com",
-  "password": "password"
+  "email": "prem@gmail.com",
+  "password": "prem"
 }
 ```
 #### Response
@@ -78,7 +77,7 @@ POST /api/todos
   "description": "Buy milk, eggs, and bread"
 }
 ```
-- Requires authentication via an Authorization header.
+- **Requires authentication via an Authorization header.
 - Responds with 401 Unauthorized if token is missing or invalid.
 
 #### Response
@@ -95,7 +94,7 @@ POST /api/todos
 ```json
 PUT /api/todos/1
 {
-  "title": "Buy groceries",
+  "title": "Buy groceries updated",
   "description": "Buy milk, eggs, bread, and cheese"
 }
 ```
@@ -107,7 +106,7 @@ PUT /api/todos/1
 ```json
 {
   "id": 1,
-  "title": "Buy groceries",
+  "title": "Buy groceries updated",
   "description": "Buy milk, eggs, bread, and cheese"
 }
 ```
@@ -136,11 +135,6 @@ GET /api/todos
       "id": 1,
       "title": "Buy groceries",
       "description": "Buy milk, eggs, bread"
-    },
-    {
-      "id": 2,
-      "title": "Pay bills",
-      "description": "Pay electricity and water bills"
     }
   ]
 }
